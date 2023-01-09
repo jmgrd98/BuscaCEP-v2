@@ -5,7 +5,10 @@ import Card from './components/Card/Card'
 function App() {
 
 const [ceps, setCeps] = useState([])
+const [ufs, setUfs] = useState([])
+const [cidades, setCidades] = useState([])
 const [bairros, setBairros] = useState([])
+const [logradouros, setLogradouros] = useState([])
 const [inputText, setInputText] = useState('')
 
   function handleChange(e){
@@ -18,12 +21,14 @@ async function fetchAPI(e){
   .then(response => response.json())
   .then(data => {
     setCeps([...ceps, data.cep])
+    setUfs([...ufs, data.uf])
+    setCidades([...cidades, data.localidade])
     setBairros([...bairros, data.bairro])
+    setLogradouros([...logradouros, data.logradouro])
     setInputText('')
     console.log(data)
   })
   .catch((error) => console.log(error))
-  // .finally(bairros.shift())
 }
 
   return (
@@ -45,14 +50,17 @@ async function fetchAPI(e){
         </header>
 
       <main>
-        <p>Insira um CEP!</p>
+        {ceps.length == 0 && <p style={{fontWeight: 'bold'}}>Insira um CEP!</p>}
 
         {ceps.map((cep, index) => {
           return(
             <Card
             key={cep} 
             cep={cep}
-            endereco={bairros[index]}/>
+            uf={ufs[index]}
+            cidade={cidades[index]}
+            logradouro={logradouros[index]}
+            bairro={bairros[index]}/>
           )
         })}
       </main>

@@ -9,7 +9,24 @@ border-radius: 20px;
 
     .cardContainer{
         display: flex;
-        padding: 20px;
+        flex-direction: column;
         justify-content: space-between;
+    }
+
+    .cardHeader{
+        border: 1px solid blue;
+        border-radius: 20px 20px 0px 0px;
+        display: flex;
+        justify-content: center;
+        padding: 10px;
+        color: blue;
+        background-color: white;
+    }
+
+    .cardBody{
+        padding: 10px;
+        display: flex;
+        justify-content: space-evenly;
+        gap: 10px;
     }
 `
