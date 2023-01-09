@@ -5,29 +5,25 @@ import Card from './components/Card/Card'
 function App() {
 
 const [ceps, setCeps] = useState([])
+const [bairros, setBairros] = useState([])
 const [inputText, setInputText] = useState('')
 
   function handleChange(e){
     setInputText(e.target.value)
 }
 
-function handleSubmit(e){
-    e.preventDefault()
-    fetchAPI(url)
-    setCeps([...ceps, inputText])
-    setInputText('')
-    console.log(...ceps)
-}
-
 async function fetchAPI(e){ 
   e.preventDefault() 
   await fetch(`https://viacep.com.br/ws/${inputText}/json/`)
   .then(response => response.json())
-  .then(data => console.log(data))
-  .catch((error) => console.log(error))
-
-    setCeps([...ceps, inputText])
+  .then(data => {
+    setCeps([...ceps, data.cep])
+    setBairros([...bairros, data.bairro])
     setInputText('')
+    console.log(data)
+  })
+  .catch((error) => console.log(error))
+  // .finally(bairros.shift())
 }
 
   return (
@@ -51,12 +47,12 @@ async function fetchAPI(e){
       <main>
         <p>Insira um CEP!</p>
 
-        {ceps.map(cep => {
+        {ceps.map((cep, index) => {
           return(
             <Card
             key={cep} 
             cep={cep}
-            endereco={cep}/>
+            endereco={bairros[index]}/>
           )
         })}
       </main>
