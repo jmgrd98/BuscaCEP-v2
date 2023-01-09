@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 import Card from './components/Card/Card'
+import {FaMapMarkerAlt} from 'react-icons/fa'
 
 function App() {
 
@@ -36,7 +37,10 @@ async function fetchAPI(e){
 
       <header>
 
+      <div className="logo">
+        <FaMapMarkerAlt size={50}/>
         <h1>BuscaCEP</h1>
+        </div>
 
         <form onSubmit={fetchAPI} className="SearchForm">
             <input

@@ -23,10 +23,20 @@ border-radius: 20px;
         background-color: white;
     }
 
+    span{
+        font-weight: bold;
+    }
+
     .cardBody{
         padding: 10px;
         display: flex;
         justify-content: space-evenly;
+        align-items: center;
         gap: 10px;
+    }
+
+    button{
+        background-color: transparent;
+        color: white;
     }
 `

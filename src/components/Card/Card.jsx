@@ -1,4 +1,5 @@
 import { CardStyle } from "./style";
+import {FaMapMarkedAlt} from 'react-icons/fa'
 
 export default function Card({cep, uf, cidade, bairro, logradouro}){
 
@@ -16,7 +17,7 @@ export default function Card({cep, uf, cidade, bairro, logradouro}){
                 <p>{bairro}</p>
                 <p>{logradouro}</p>
 
-                
+                <button><FaMapMarkedAlt size={25}/></button>
                 </div>
             </div>
 
