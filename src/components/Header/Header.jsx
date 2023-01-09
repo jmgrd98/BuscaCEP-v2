@@ -1,25 +1,28 @@
 import { useState } from "react"
 import { HeaderStyle } from "./style"
 
-const url = `https://viacep.com.br/ws/value/json/`
-
-async function fetchAPI(e){
-    fetch(url.replace('value', ))
-}
-    
 
 
 export default function Header(){
 
+async function fetchAPI(e){
+    const url = `https://viacep.com.br/ws/value/json/`
+    await fetch(url.replace('value', inputText))
+    .then(response => response.json())
+    .then(data => console.log(data))
+}
+
 const [ceps, setCeps] = useState([])
+const [inputText, setInputText] = useState('')
 
 function handleChange(e){
-    setCeps(e.target.value)
-
+    setInputText(e.target.value)
 }
 
 function handleSubmit(e){
     e.preventDefault()
+    setCeps([...ceps, inputText])
+    setInputText('')
     console.log(ceps)
 }
 
@@ -33,7 +36,7 @@ function handleSubmit(e){
         <form onSubmit={handleSubmit} className="SearchForm">
             <input
             onChange={handleChange}
-            // value={inputText}
+            value={inputText}
             type="text"
             placeholder="Pesquise um CEP"
             />
