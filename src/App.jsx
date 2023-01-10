@@ -3,6 +3,7 @@ import './App.css'
 import Card from './components/Card/Card'
 import {FaMapMarkerAlt} from 'react-icons/fa'
 import MapModal from './components/MapModal/MapModal'
+// import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
 
 function App() {
 
@@ -69,7 +70,19 @@ async function fetchAPI(e){
           )
         })}
 
-        <MapModal></MapModal>
+    {/* <MapContainer center={position} zoom={13} scrollWheelZoom={false}>
+        <TileLayer
+          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+        />
+        <Marker position={position}>
+          <Popup>
+            A pretty CSS3 popup. <br /> Easily customizable.
+          </Popup>
+        </Marker>
+      </MapContainer> */}
+
+        {/* <MapModal></MapModal> */}
       </main>
     </div>
   )
