@@ -19,7 +19,7 @@ export default function Card({cep, uf, cidade, bairro, logradouro}){
                 <p>{bairro}</p>
                 <p>{logradouro}</p>
 
-                <button onClick={() => {setModalOpen(true)}}><FaMapMarkedAlt size={25}/></button>
+                <button onClick={hello}><FaMapMarkedAlt size={25}/></button>
                 </div>
             </div>
 
