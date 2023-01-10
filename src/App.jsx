@@ -4,6 +4,7 @@ import Card from './components/Card/Card'
 import {FaMapMarkerAlt} from 'react-icons/fa'
 import MapModal from './components/MapModal/MapModal'
 // import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
+import Router from './Router'
 
 function App() {
 
@@ -13,6 +14,7 @@ const [cidades, setCidades] = useState([])
 const [bairros, setBairros] = useState([])
 const [logradouros, setLogradouros] = useState([])
 const [inputText, setInputText] = useState('')
+const [modalOpen, setModalOpen] = useState(false)
 
   function handleChange(e){
     setInputText(e.target.value)
@@ -36,6 +38,7 @@ async function fetchAPI(e){
 
   return (
     <div className="App">
+     
 
       <header>
 
@@ -69,6 +72,8 @@ async function fetchAPI(e){
             bairro={bairros[index]}/>
           )
         })}
+
+        <MapModal isOpen={modalOpen}/>
 
     {/* <MapContainer center={position} zoom={13} scrollWheelZoom={false}>
         <TileLayer

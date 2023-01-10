@@ -1,9 +1,10 @@
 import { CardStyle } from "./style";
 import {FaMapMarkedAlt} from 'react-icons/fa'
-// import { generateMap } from "../MapModal/MapModal";
+import { hello } from "../MapModal/MapModal";
+import MapModal from "../MapModal/MapModal";
+
 
 export default function Card({cep, uf, cidade, bairro, logradouro}){
-
     return(
 
         <CardStyle>
@@ -18,7 +19,7 @@ export default function Card({cep, uf, cidade, bairro, logradouro}){
                 <p>{bairro}</p>
                 <p>{logradouro}</p>
 
-                <button><FaMapMarkedAlt size={25}/></button>
+                <button onClick={() => {setModalOpen(true)}}><FaMapMarkedAlt size={25}/></button>
                 </div>
             </div>
 
