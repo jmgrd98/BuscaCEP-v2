@@ -2,6 +2,7 @@ import { useState } from 'react'
 import './App.css'
 import Card from './components/Card/Card'
 import {FaMapMarkerAlt} from 'react-icons/fa'
+import MapModal from './components/MapModal/MapModal'
 
 function App() {
 
@@ -27,7 +28,7 @@ async function fetchAPI(e){
     setBairros([...bairros, data.bairro])
     setLogradouros([...logradouros, data.logradouro])
     setInputText('')
-    console.log(data)
+    console.log(navigator.geolocation.getCurrentPosition())
   })
   .catch((error) => console.log(error))
 }
@@ -67,6 +68,8 @@ async function fetchAPI(e){
             bairro={bairros[index]}/>
           )
         })}
+
+        <MapModal></MapModal>
       </main>
     </div>
   )

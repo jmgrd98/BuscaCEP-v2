@@ -1,5 +1,6 @@
 import { CardStyle } from "./style";
 import {FaMapMarkedAlt} from 'react-icons/fa'
+// import { generateMap } from "../MapModal/MapModal";
 
 export default function Card({cep, uf, cidade, bairro, logradouro}){
 

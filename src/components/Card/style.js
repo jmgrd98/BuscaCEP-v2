@@ -11,10 +11,11 @@ border-radius: 20px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+
     }
 
     .cardHeader{
-        border: 1px solid blue;
+        border: 3px solid blue;
         border-radius: 20px 20px 0px 0px;
         display: flex;
         justify-content: center;
