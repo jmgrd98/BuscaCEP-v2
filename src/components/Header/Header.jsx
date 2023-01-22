@@ -1,12 +1,9 @@
-import { MapStyle } from "./style";
+import { HeaderStyle } from "./style"
 
-export default function Map(){
-
-    return(
-
-        <div className="App">
-
-      <header>
+export default function Header() {
+  return (
+<HeaderStyle>
+    <header>
 
       <div className="logo">
         <FaMapMarkerAlt size={50}/>
@@ -23,11 +20,6 @@ export default function Map(){
             <button type="submit">Buscar</button>
         </form>
         </header>
-
-        <MapStyle>
-        <div>Hello!</div>
-        </MapStyle>
-
-    </div>
-    )
+    </HeaderStyle>
+  )
 }

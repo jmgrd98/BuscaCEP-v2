@@ -1,19 +1,6 @@
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  list-style: none;
-  text-decoration: none;
-}
+import styled from "styled-components";
 
-.App{
-  width: 100vw;
-  max-width: 100vw;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
+export const HeaderStyle = styled.header`
 header{
   background-color: blue;
   color: white;
@@ -53,9 +40,4 @@ main{
   padding: 50px;
   gap: 10px;
 }
-
-.mapContainer{
-  height: 300px;
-  width: 100%;
-}
-
+`

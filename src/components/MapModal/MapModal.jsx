@@ -1,8 +1,3 @@
-import { MapModalStyle } from "./style"
-import { MapContainer, TileLayer, Marker, Popup, useMap} from 'react-leaflet'
-import { useEffect } from "react"
-
-
 export function hello(){
     alert('Hello!')
 }
