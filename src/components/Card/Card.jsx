@@ -6,10 +6,12 @@ export default function Card({cep, uf, cidade, bairro, logradouro}){
 
 function success(position){
     let crd = position.coords
+    let pos = [crd.latitude, crd.longitude]
 
-    console.log(crd.latitude)
+    console.log(pos)
 }
 
+navigator.geolocation.getCurrentPosition(success)
     
 
     return(
