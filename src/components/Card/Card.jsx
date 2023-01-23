@@ -5,8 +5,8 @@ import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 export default function Card({cep, uf, cidade, bairro, logradouro}){
 
 function success(position){
-    let crd = position.coords
-    let pos = [crd.latitude, crd.longitude]
+    const crd = position.coords
+    const pos = [crd.latitude, crd.longitude]
 
     console.log(pos)
 }
