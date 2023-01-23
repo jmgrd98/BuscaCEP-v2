@@ -1,10 +1,17 @@
 import { CardStyle } from "./style";
 import {FaMapMarkedAlt} from 'react-icons/fa'
-import { hello } from "../MapModal/MapModal";
-import MapModal from "../MapModal/MapModal";
-
+import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 
 export default function Card({cep, uf, cidade, bairro, logradouro}){
+
+function success(position){
+    let crd = position.coords
+
+    console.log(crd.latitude)
+}
+
+    
+
     return(
 
         <CardStyle>
@@ -19,10 +26,23 @@ export default function Card({cep, uf, cidade, bairro, logradouro}){
                 <p>{bairro}</p>
                 <p>{logradouro}</p>
 
-                <button onClick={hello}><FaMapMarkedAlt size={25}/></button>
+                <button onClick={success}><FaMapMarkedAlt size={25}/></button>
                 </div>
+
+<MapContainer center={[51.505, -0.09]} zoom={13} scrollWheelZoom={false} className='mapContainer'>
+  <TileLayer
+    attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+  />
+  <Marker position={[51.505, -0.09]}>
+    <Popup>
+      Você está aqui!
+    </Popup>
+  </Marker>
+</MapContainer>
             </div>
 
+            
 
         </CardStyle>
     )

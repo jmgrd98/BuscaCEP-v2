@@ -8,10 +8,6 @@
 
 .App{
   width: 100vw;
-  max-width: 100vw;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 header{
@@ -20,7 +16,7 @@ header{
   width: 100%;
   padding: 20px;
   position: absolute;
-  /* gap: 10%; */
+  margin-bottom: 20px;
   top: 0;
   font-size: .7rem;
   display: flex;
@@ -45,6 +41,7 @@ input{
 }
 
 main{
+  margin-top: 20px;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -54,8 +51,4 @@ main{
   gap: 10px;
 }
 
-.mapContainer{
-  height: 300px;
-  width: 100%;
-}
 

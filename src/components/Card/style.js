@@ -40,4 +40,11 @@ border-radius: 20px;
         background-color: transparent;
         color: white;
     }
+
+    .mapContainer{
+        border: 5px solid blue;
+        border-radius: 10px;
+        width: 100%;
+        height: 300px;
+    }
 `
