@@ -4,15 +4,17 @@ import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 
 export default function Card({cep, uf, cidade, bairro, logradouro}){
 
-function success(position){
-    const crd = position.coords
-    const pos = [crd.latitude, crd.longitude]
+  navigator.geolocation.getCurrentPosition(success)
 
-    console.log(pos)
+function success(position){
+
+  const lat = position.coords.latitude
+  const lon = position.coords.longitude
+
+    console.log(lat, lon)
 }
 
-navigator.geolocation.getCurrentPosition(success)
-    
+
 
     return(
 
