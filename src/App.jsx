@@ -38,7 +38,7 @@ async function fetchAPI(e){
       <header>
 
       <div className="logo">
-        <FaMapMarkerAlt size={50}/>
+        <FaMapMarkerAlt size={50} className='markerIcon'/>
         <h1>BuscaCEP</h1>
         </div>
 

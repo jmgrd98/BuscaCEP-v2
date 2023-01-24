@@ -2,7 +2,13 @@ import styled from "styled-components";
 
 export const CardStyle = styled.section`
 
-background-color: blue;
+:root{
+  --primary: #2E4057;
+  --secondary: #66A182;
+  --terciary: #C0D461;
+}
+
+background-color: var(--terciary);
 color: white;
 width: 100%;
 border-radius: 20px;
@@ -15,7 +21,7 @@ border-radius: 20px;
     }
 
     .cardHeader{
-        border: 3px solid blue;
+        border: 3px solid var(--terciary);
         border-radius: 20px 20px 0px 0px;
         display: flex;
         justify-content: center;

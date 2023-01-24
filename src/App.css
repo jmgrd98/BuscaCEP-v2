@@ -6,12 +6,18 @@
   text-decoration: none;
 }
 
+:root{
+  --primary: #2E4057;
+  --secondary: #66A182;
+  --terciary: #C0D461;
+}
+
 .App{
   width: 100vw;
 }
 
 header{
-  background-color: blue;
+  background-color: var(--primary);
   color: white;
   width: 100%;
   padding: 20px;
@@ -30,6 +36,10 @@ header{
   gap: 5px;
 }
 
+.markerIcon{
+  color: var(--secondary);
+}
+
 .SearchForm{
   display: flex;
   gap: 10px;
@@ -37,7 +47,15 @@ header{
 
 input{
   border-radius: 10px;
-  padding: 5px;
+  padding: 10px;
+  border: 3px solid var(--secondary)
+}
+
+form button{
+  background-color: var(--secondary);
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
 }
 
 main{
