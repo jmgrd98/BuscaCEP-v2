@@ -8,7 +8,7 @@ export const CardStyle = styled.section`
   --terciary: #C0D461;
 }
 
-background-color: var(--terciary);
+background-color: var(--primary);
 color: white;
 width: 100%;
 border-radius: 20px;
@@ -21,12 +21,12 @@ border-radius: 20px;
     }
 
     .cardHeader{
-        border: 3px solid var(--terciary);
+        border: 3px solid var(--primary);
         border-radius: 20px 20px 0px 0px;
         display: flex;
         justify-content: center;
         padding: 10px;
-        color: blue;
+        color: var(--secondary);
         background-color: white;
     }
 
@@ -44,11 +44,11 @@ border-radius: 20px;
 
     button{
         background-color: transparent;
-        color: white;
+        color: var(--terciary);
     }
 
     .mapContainer{
-        border: 5px solid blue;
+        border: 5px solid var(--primary);
         border-radius: 10px;
         width: 100%;
         height: 300px;
