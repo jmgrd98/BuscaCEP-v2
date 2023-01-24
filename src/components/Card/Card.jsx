@@ -39,7 +39,7 @@ useEffect(() => {
                 <p>{bairro}</p>
                 <p>{logradouro}</p>
 
-                <button onClick={setPosition([lat, lon])}><FaMapMarkedAlt size={25}/></button>
+                <button onClick={position}><FaMapMarkedAlt size={25}/></button>
                 </div>
 
 <MapContainer center={position} zoom={zoom} scrollWheelZoom={false} ref={setMap} className='mapContainer'>
